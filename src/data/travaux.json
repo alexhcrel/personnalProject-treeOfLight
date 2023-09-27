@@ -3,7 +3,7 @@
 		"id": "001",
 		"title": "Booki - réservation d'hôtels",
 		"cover": "/images/image1.jpg",
-		"description": "Projet réalisé lors de ma formation chez Openclassrooms. Ma mission était de faire la mise en page du site Booki, spécialisé dans la location de logements entre particuliers. A partir d'une maquette réalisée sur Figma, j'ai réalisé la partie frontend du site en utilisant les langages HTML et CSS.",
+		"description": "Projet réalisé ",
 		"langages": [
 			"html",
 			"css"
@@ -26,7 +26,7 @@
 		"id": "002",
 		"title": "Sophie Bluel - portfolio d'architecte",
 		"cover": "/images/image2.jpg",
-		"description": "Projet réalisé lors de ma formation chez Openclassrooms. Cette mission consistait à rendre le portfolio d'une architecte d'intérieur dynamique. En utilisant JAVASCRIPT, j'ai créé une modale de connection qui donnait accès à la gestion des projets (ajout, suppression, modification...). La mise en page a été réalisée en HTML ET CSS.",
+		"description": "Projet réalisé ",
 		"langages": [
 			"html",
 			"css",
@@ -44,54 +44,5 @@
 		],
 		"link": "https://alexhcrel.github.io/sb_sans_backend/index.html",
 		"encart": "lien vers le site"
-	},
-
-	{
-		"id": "003",
-		"title": "Kaza - location de logements",
-		"cover": "/images/image3.jpg",
-		"description": "Projet réalisé lors de ma formation chez Openclassrooms.  Kasa est un site de réservation de logements entreparticuliers. Pour développer le frontend du site, j'ai utilisé la bibliothèque REACT, qui m'a permis de gérer la mise en place des différents composants, dont les plus notoires sont le carrousel et les 'collapses'",
-		"langages": [
-			"html",
-			"css",
-			"react"
-		],
-		"compétences": [
-			"responsive",
-			"ancres"
-			],
-		
-		"contexte": "Formation Openclassrooms",
-			
-		"tags": [
-			"mise en page"
-		],
-		"link": "http://www.kasa.alerch.fr/",
-		"encart": "lien vers le site"
-	},
-
-	{
-		"id": "004",
-		"title": "Vieux Grimoires - notation de livres",
-		"cover": "/images/image4.jpg",
-		"description": "Projet réalisé lors de ma formation chez Openclassrooms. 'Les vieux grimoires' est un site développé pour une chaine de librairies, permettant aux utilisateurs de noter leurs lectures. J'ai réalisé la partie backend du site en utilisant le framework EXPRESS de NODE.JS. Les compétences développées ici sont principalement la création des APIs REST",
-		"langages": [
-			"html",
-			"css",
-			"nodeJS",
-			"Express"
-		],
-		"compétences": [
-			"responsive",
-			"ancres"
-			],
-		
-		"contexte": "Formation Openclassrooms",
-			
-		"tags": [
-			"mise en page"
-		],
-		"link": "https://github.com/alexhcrel/openclassrooms-projet7-vieux-grimoires.git",
-		"encart": "lien vers le code du site"
 	}
 ]

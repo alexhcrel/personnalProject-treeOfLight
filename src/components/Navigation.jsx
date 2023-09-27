@@ -3,7 +3,7 @@ import "../styles/navigation.css";
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
+    <nav className="navigation"><h1>Tree of Light </h1>
     <ul>
       <li><a href="/#">Accueil</a></li>
       <li><a href="#about">A propos</a></li>
