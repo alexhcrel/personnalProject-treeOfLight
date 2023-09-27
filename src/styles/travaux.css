@@ -1,0 +1,21 @@
+.travaux {
+  height: auto;
+  position: relative;
+  padding-top: 55px;
+  padding-bottom: 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .travaux h1{
+      width: 90%;
+      font-size: 44px;
+    }
+  }
