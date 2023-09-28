@@ -152,13 +152,10 @@ body {
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-}
-
-#image-banner {
-  width: 100%;
-  min-width: 1350px;
-  position: fixed;
+  align-items: center;
 }
 
 h1 {

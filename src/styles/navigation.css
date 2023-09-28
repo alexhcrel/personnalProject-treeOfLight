@@ -9,9 +9,8 @@
   justify-content: space-between;
   padding-left: 40px;
   align-items: center;
-  margin-bottom: 155px;
 }
-/* ok */
+
 .navigation ul {
   display: flex;
   width: min-content;
@@ -19,7 +18,7 @@
   padding-right: 80px;
 }
 
-/* ok */
+
 .navigation ul li {
   display: flex;
   text-decoration: none;
@@ -42,38 +41,4 @@
 a:hover {
   font-weight: 600;
   color: black;
-}
-
-@media screen and (max-width: 1024px) {
-  /* Votre CSS pour la tablette ici */
-
-  .navigation {
-    justify-content: center;
-  }
-
-  .navigation ul {
-    /* padding-top: 25px; */
-    padding-inline: 25px;
-    /* padding-bottom: 15px; */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navigation {
-    height: auto;
-    width: 100%;
-  }
-
-  .navigation ul {
-    padding-top: 25px;
-    padding-bottom: 15px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    /* justify-content: center; */
-  }
-
-  .navigation ul li a {
-    min-width: 10px;
-  }
 }
