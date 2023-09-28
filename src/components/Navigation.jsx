@@ -3,13 +3,12 @@ import "../styles/navigation.css";
 
 const Navigation = () => {
   return (
-    <nav className="navigation"><h1>Tree of Light </h1>
+    <nav className="navigation">
     <ul>
-      <li><a href="/#">Accueil</a></li>
-      <li><a href="#about">A propos</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#travaux">Travaux</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <h2>Nos produits</h2>
+      <li><a href="/#">Nos lampes et appliques murales</a></li>
+      <li><a href="#about">Notre collection de bois flottés</a></li>
+      <li><a href="#competences">Petits ameublements</a></li>
 
     </ul>
   </nav>

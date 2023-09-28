@@ -1,5 +1,6 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+
+import Main from "../components/Main";
 import Banner from "../components/Banner";
 // import AboutMe from "../components/AboutMe";
 import Travaux from "../components/Travaux";
@@ -13,9 +14,11 @@ const Home = () => {
     return (
       
       <div className="home">
-        
-         <Navigation />
-         <Banner />
+        <Banner />
+     
+
+            <Main />
+   
          <Travaux id="travaux" />
          {/* <AboutMe id="about" /> */}
         {/* <Contact id = "contact" /> */}

@@ -140,7 +140,6 @@ html {
 body {
   background-color: black;
   position: relative;
-  background-size: contain;
   font-family: "Courgette", sans-serif;
   display: flex;
   margin-inline: auto;
@@ -153,9 +152,11 @@ body {
 
 .home {
   display: flex;
-  flex-direction: column;
   overflow: hidden;
-  align-items: center;
+}
+
+.alignement {
+  display: flex;
 }
 
 h1 {
