@@ -1,9 +1,9 @@
 import React from "react";
 
-import Main from "../components/Main";
+// import Main from "../components/Main";
 import Banner from "../components/Banner";
 // import AboutMe from "../components/AboutMe";
-import Travaux from "../components/Travaux";
+// import Travaux from "../components/Travaux";
 // import Contact from "../components/Contact";
 
 
@@ -15,7 +15,7 @@ const Home = () => {
       
       <div className="home">
         <Banner />
-        <Main />
+        <div><h1>en travaux</h1></div>
    
          {/* <Travaux id="travaux" /> */}
          {/* <AboutMe id="about" /> */}
