@@ -153,6 +153,7 @@ body {
 .home {
   display: flex;
   overflow: hidden;
+  color: white;
 }
 
 .alignement {
@@ -161,24 +162,18 @@ body {
 
 h1 {
   font-size: 55px;
-  color: white;
+  
 }
 
 h2 {
   font-size: 22px;
-  color: white;
-  &:hover {
-    font-weight: 600;
-  }
 }
 
 h3 {
   font-size: 20px;
-  color: white;
 }
 
 p,
 li {
-  color: white;
   font-size: 20px;
 }

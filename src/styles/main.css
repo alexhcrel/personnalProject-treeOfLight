@@ -8,21 +8,18 @@
   /* height: 800px; */
   margin-inline: auto;
   width: 100%;
-  background-color: antiquewhite;
 }
 
 .corps {
   display: flex;
  width: 60%;
   justify-content: center;
-  margin-top: 100px;
 }
 
 .corps img {
-  width: 65%;
+  width: 90%;
 }
 
 .commandes {
   width: 20%;
-  background-color: cadetblue;
 }

@@ -19,7 +19,7 @@ const Home = () => {
 
             <Main />
    
-         <Travaux id="travaux" />
+         {/* <Travaux id="travaux" /> */}
          {/* <AboutMe id="about" /> */}
         {/* <Contact id = "contact" /> */}
       </div>
