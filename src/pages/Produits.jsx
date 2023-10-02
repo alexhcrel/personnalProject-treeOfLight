@@ -1,22 +1,30 @@
 import React from "react";
 import Banner from "../components/Banner";
 import ImageSlider from "../components/ImageSlider";
+import "../styles/imageSlider.css";
 
 
 const Produits = () => {
   const slides = [
-    {src: "/images/ameublements/img1.jpg",  title: "boite", alt:"tronc"},
-    {src: "/images/ameublements/img2.jpg",  title: "banc", alt:"tronc"},
-    {src: "/images/ameublements/img3.jpg",  title: "curb", alt:"tronc"},
-    {src: "/images/ameublements/img4.jpg",  title: "coffre", alt:"tronc"}
-  ]
+    {url: "http://localhost:3000/images/ameublements/img1.jpg",  title: "boite", alt:"tronc"},
+    {url: "http://localhost:3000/images/ameublements/img2.jpg",  title: "boite", alt:"tronc"},
+    {url: "http://localhost:3000/images/ameublements/img3.jpg",  title: "banc", alt:"tronc"},
+    {src: "http://localhost:3000/images/ameublements/img4.jpg",  title: "curb", alt:"tronc"}
+  ];
+
+  const containerStyles = {
+    width: '550px',
+    height: "280px",
+    margin: "110px auto",
+  };
 
   return (
     
     <div className="home">
       <Banner />
-      <ImageSlider slides={slides}/>
- 
+      <div style={containerStyles}>
+        <ImageSlider slides={slides}/>
+      </div>
        {/* <Travaux id="travaux" /> */}
        {/* <AboutMe id="about" /> */}
       {/* <Contact id = "contact" /> */}
