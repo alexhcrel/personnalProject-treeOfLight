@@ -1,0 +1,26 @@
+.exposition {
+  position: fixed;
+  top: 110px;
+  display: flex;
+  
+  justify-content: center;
+  /* align-items: top; */
+  /* height: 800px; */
+  margin-inline: auto;
+  width: 100%;
+}
+
+.corps {
+  height : 850px;
+  display: flex;
+ width: 60%;
+  justify-content: center;
+}
+
+.corps img {
+  width: 90%;
+}
+
+.commandes {
+  width: 20%;
+}

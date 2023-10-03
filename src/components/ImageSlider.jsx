@@ -17,7 +17,7 @@ const sliderStyles = {
         borderRadius: '10px',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        backgroundImage: `url(${slides[currentIndex].url})`,
+        backgroundImage: `url(${slides[currentIndex]})`,
     }
 
     const leftArrowStyle = {

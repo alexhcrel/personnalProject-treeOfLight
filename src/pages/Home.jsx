@@ -16,10 +16,6 @@ const Home = () => {
       <div className="home">
         <Banner />
         <Main />
-   
-         {/* <Travaux id="travaux" /> */}
-         {/* <AboutMe id="about" /> */}
-        {/* <Contact id = "contact" /> */}
       </div>
     );
   };
