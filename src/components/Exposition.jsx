@@ -27,17 +27,17 @@ const slides = lampes.map((e)=> e.url);
   // ];
    console.log(slides)
 
-  const containerStyles = {
-    width: '450px',
-    height: "450px",
-    margin: "50px auto",
-  };
+  // const containerStyles = {
+  //   width: '450px',
+  //   height: "450px",
+  //   margin: "50px auto",
+  // };
 
   return (
     <section className="exposition">
       <Navigation />
       <div className="corpsProduits">
-        <div style={containerStyles}>
+        <div className="containerStyles">
           <ImageSlider slides={slides}/>
         </div>
         <div className="link">

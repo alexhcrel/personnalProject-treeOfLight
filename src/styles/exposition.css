@@ -1,11 +1,8 @@
 .exposition {
-  
+  position: absolute;
   top: 110px;
   display: flex;
-  
   justify-content: center;
-  /* align-items: top; */
-  /* height: 800px; */
   margin-inline: auto;
   width: 100%;
 }
@@ -13,10 +10,68 @@
 .corpsProduits {
   display: flex;
   flex-direction: column;
-  height : 850px;
   width: 60%;
   justify-content: center;
-  align-items: center;
+  /* background-color: pink; */
+}
+
+.containerStyles {
+  width: 450px;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.sliderStyle {
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  height: fit-content;
+  position: relative;
+}
+
+.defilement {
+  display: flex;
+  justify-content: center;
+}
+
+.slideStyle {
+  width: 60%;
+  height: 650px;
+  border-radius: 10px;
+  background-position-x: center;
+  background-size: contain;
+}
+
+.leftArrowStyle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -82px;
+  font-size: 145px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.rightArrowStyle {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: -82px;
+  font-size: 145px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.dotContainerStyle {
+  display: flex;
+  justify-content: center;
+}
+
+.dotStyle {
+margin: 0 3px;
+cursor: pointer;
+font-size: 20px;
 }
 
 .link {
@@ -24,19 +79,18 @@
   width: 90%;  
   display: flex;
   justify-content: space-between;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .linkSize {
   display: flex;
   width: 40%;
   height: 100px;
-  background-color: blue;
+  /* background-color: blue; */
   border-radius: 10px;
   font-size: 35px;
   justify-content: center;
   align-items: center;
-
 }
 
 .commandes {

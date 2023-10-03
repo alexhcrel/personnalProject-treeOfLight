@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../styles/imageSlider.css";
 import "../styles/exposition.css";
 
 
@@ -7,49 +6,8 @@ import "../styles/exposition.css";
 const ImageSlider = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-const sliderStyles = {
-    height: '100%',
-    position:'relative',
-};
-
     const slideStyles = {
-        // width: '100%',
-        height: '1000px',
-        borderRadius: '10px',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundImage: `url(${slides[currentIndex]})`,
-    }
-
-    const leftArrowStyle = {
-      position: 'absolute',
-      top: '50%',
-      transform: 'translate(0, -50%)',
-      left: '-82px',
-      fontSize: '145px',
-      zIndex: '1',
-      cursor: 'pointer',
-    }
-
-    const rightArrowStyle = {
-      position: 'absolute',
-      top: '50%',
-      transform: 'translate(0, -50%)',
-      right: '-82px',
-      fontSize: '145px',
-      zIndex: '1',
-      cursor: 'pointer',
-    };
-
-    const dotContainerStyle = {
-      display: 'flex',
-      justifyContent: 'center',
-    };
-
-    const dotStyle = {
-      margin: '0 3px',
-      cursor: 'pointer',
-      fontSize: '20px',
+      backgroundImage: `url(${slides[currentIndex]})`,
     }
 
     const goToPrevious = () => {
@@ -69,14 +27,16 @@ const sliderStyles = {
     } ;
 
 
-    return <div style={sliderStyles}>
+    return <div className="sliderStyle">
       {/* <img src="http://localhost:3000/images/icons/arrow_left.png" alt="Description de l'image" /> */}
-        <div style={leftArrowStyle} onClick={goToPrevious}>‹</div>
-        <div style={slideStyles}></div>
-        <div style={rightArrowStyle} onClick={goToNext}>›</div>
-        <div style={dotContainerStyle}>
+        <div className="defilement">
+          <div className = "leftArrowStyle" onClick={goToPrevious}>‹</div>
+          <div className="slideStyle" style={slideStyles}></div>
+          <div className="rightArrowStyle" onClick={goToNext}>›</div>
+        </div>
+        <div className = "dotContainerStyle">
           {slides.map((slide, slideIndex) => (
-            <div key={slideIndex} style={dotStyle} onClick={() => goToSlide(slideIndex)}>
+            <div key={slideIndex} onClick={() => goToSlide(slideIndex)}>
               ●
               </div>
           ))}
