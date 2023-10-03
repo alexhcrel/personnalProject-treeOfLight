@@ -12,7 +12,7 @@ const Exposition = () => {
   const slide = bdd
 
 
-console.log(slide[4].url)
+console.log(slide[3].url)
 
 const slides = slide.map((e)=> e.url);
 
