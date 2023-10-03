@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/imageSlider.css";
+import "../styles/exposition.css";
 
 
 
@@ -80,6 +81,7 @@ const sliderStyles = {
               </div>
           ))}
         </div>
+
       {/* <img src="http://localhost:3000/images/icons/arrow_right.png" alt="Description de l'image" /> */}
     </div>
 };

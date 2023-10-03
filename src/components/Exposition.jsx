@@ -30,6 +30,10 @@ const slides = bois_flotte.map((e)=> e.url);
         <div style={containerStyles}>
           <ImageSlider slides={slides}/>
         </div>
+        <div className="link">
+          <div className="linkSize linkPrev">prev</div>
+          <div className="linkSize linkNext">next</div>
+        </div>
       </div>
       <div className="commandes">
         <h2>test</h2>

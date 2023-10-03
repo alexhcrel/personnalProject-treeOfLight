@@ -1,5 +1,5 @@
 .exposition {
-  position: fixed;
+  
   top: 110px;
   display: flex;
   
@@ -11,10 +11,32 @@
 }
 
 .corpsProduits {
-  height : 850px;
   display: flex;
- width: 60%;
+  flex-direction: column;
+  height : 850px;
+  width: 100%;
   justify-content: center;
+  align-items: center;
+}
+
+.link {
+  margin-top: 60px;
+  width: 90%;  
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+}
+
+.linkSize {
+  display: flex;
+  width: 40%;
+  height: 100px;
+  background-color: blue;
+  border-radius: 10px;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .commandes {
