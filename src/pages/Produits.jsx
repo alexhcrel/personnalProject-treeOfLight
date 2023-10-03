@@ -6,14 +6,14 @@ import "../styles/imageSlider.css";
 
 const Produits = () => {
   const slides = [
-    {url: "http://localhost:3000/images/ameublements/img1.jpg",  title: "boite", alt:"tronc"},
-    {url: "http://localhost:3000/images/ameublements/img2.jpg",  title: "boite", alt:"tronc"},
-    {url: "http://localhost:3000/images/ameublements/img3.jpg",  title: "banc", alt:"tronc"},
-    {src: "http://localhost:3000/images/ameublements/img4.jpg",  title: "curb", alt:"tronc"}
+    {url: "http://localhost:3000/images/ameublements/am_img1.jpg",  title: "boite", alt:"tronc"},
+    {url: "http://localhost:3000/images/ameublements/am_img2.jpg",  title: "boite", alt:"tronc"},
+    {url: "http://localhost:3000/images/ameublements/am_img3.jpg",  title: "banc", alt:"tronc"},
+    {url: "http://localhost:3000/images/ameublements/am_img4.jpg",  title: "curb", alt:"tronc"}
   ];
 
   const containerStyles = {
-    width: '550px',
+    width: '450px',
     height: "280px",
     margin: "110px auto",
   };
