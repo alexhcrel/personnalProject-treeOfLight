@@ -13,8 +13,8 @@ const sliderStyles = {
 };
 
     const slideStyles = {
-        width: '100%',
-        height: '100%',
+        // width: '100%',
+        height: '1000px',
         borderRadius: '10px',
         backgroundPosition: 'center',
         backgroundSize: 'cover',

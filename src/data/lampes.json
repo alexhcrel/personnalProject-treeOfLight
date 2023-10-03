@@ -1,17 +1,12 @@
 [
 	{
-		"id": "001",
-		"title": "Banc",
-		"url": "http://localhost:3000/images/lampes/lampe_img1.jpg"
-	},
-	{
 		"id": "002",
 		"title": "Banc",
-		"url": "http://localhost:3000/images/lampes/lampe_img2.jpg"
+		"url": "http://localhost:3000/images/lampes/lampe_img2.png"
 	},
 	{
 		"id": "003",
 		"title": "Banc",
-		"url": "http://localhost:3000/images/lampes/lampe_img3.jpg"
+		"url": "http://localhost:3000/images/lampes/lampe_img3.png"
 	}
 ]

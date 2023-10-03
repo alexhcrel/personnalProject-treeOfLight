@@ -1,13 +1,23 @@
 import React from "react";
 import "../styles/exposition.css";
+import choix_bdd from "../data/choix_bdd.json";
 import bois_flotte from "../data/bois_flotte.json";
+import ameublements from "../data/ameublements.json";
+import lampes from "../data/lampes.json";
+
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 
 
 const Exposition = () => {
    
-const slides = bois_flotte.map((e)=> e.url);
+
+  const bdd = Array(0).fill(lampes,).fill(ameublements)
+
+
+console.log(bdd)
+
+const slides = lampes.map((e)=> e.url);
 
   // const slides = [
   //   {url: "http://localhost:3000/images/ameublements/am_img1.jpg",  title: "boite", alt:"tronc"},
