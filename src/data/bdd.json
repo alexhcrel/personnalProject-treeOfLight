@@ -1,0 +1,59 @@
+[
+	{
+		"id": "002",
+		"category": "lampe",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/lampes/lampe_img2.png"
+	},
+	{
+		"id": "003",
+		"category": "lampe",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/lampes/lampe_img3.png"
+	},{
+		"id": "001",
+		"category": "ameublement",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/ameublements/am_img1.jpg"
+	},
+	{
+		"id": "002",
+		"category": "ameublement",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/ameublements/am_img2.jpg"
+	},
+	{
+		"id": "003",
+		"category": "ameublement",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/ameublements/am_img3.jpg"
+	},
+	{
+		"id": "004",
+		"category": "ameublement",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/ameublements/am_img4.jpg"
+	},
+	{
+		"id": "004",
+		"category": "boisflotte",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"
+	},{
+		"id": "004",
+		"category": "boisflotte",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img3.jpg"
+	},{
+		"id": "004",
+		"category": "boisflotte",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img2.jpg"
+	},
+	{
+		"id": "004",
+		"category": "boisflotte",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img1.jpg"
+	}
+]
