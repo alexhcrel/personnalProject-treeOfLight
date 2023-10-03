@@ -10,15 +10,11 @@
   width: 100%;
 }
 
-.corps {
+.corpsProduits {
   height : 850px;
   display: flex;
  width: 60%;
   justify-content: center;
-}
-
-.corps img {
-  width: 90%;
 }
 
 .commandes {

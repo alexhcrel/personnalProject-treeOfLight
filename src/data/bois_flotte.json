@@ -1,0 +1,22 @@
+[
+	{
+		"id": "001",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img1.jpg"
+	},
+	{
+		"id": "002",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img2.jpg"
+	},
+	{
+		"id": "003",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img3.jpg"
+	},
+	{
+		"id": "003",
+		"title": "Banc",
+		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"
+	}
+]

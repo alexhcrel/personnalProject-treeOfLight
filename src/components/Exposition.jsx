@@ -1,13 +1,13 @@
 import React from "react";
 import "../styles/exposition.css";
-import jsonData from "../data/pieces.json";
+import bois_flotte from "../data/bois_flotte.json";
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 
 
 const Exposition = () => {
    
-const slides = jsonData.map((e)=> e.url);
+const slides = bois_flotte.map((e)=> e.url);
 
   // const slides = [
   //   {url: "http://localhost:3000/images/ameublements/am_img1.jpg",  title: "boite", alt:"tronc"},
@@ -19,18 +19,17 @@ const slides = jsonData.map((e)=> e.url);
 
   const containerStyles = {
     width: '450px',
-    height: "600px",
+    height: "450px",
     margin: "50px auto",
   };
 
   return (
     <section className="exposition">
       <Navigation />
-      <div className="corps">
-      <div className="prout" style={containerStyles}>
-        
-        <ImageSlider slides={slides}/>
-      </div>
+      <div className="corpsProduits">
+        <div style={containerStyles}>
+          <ImageSlider slides={slides}/>
+        </div>
       </div>
       <div className="commandes">
         <h2>test</h2>
