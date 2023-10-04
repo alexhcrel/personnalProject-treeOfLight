@@ -1,6 +1,6 @@
 .exposition {
   position: absolute;
-  top: 110px;
+  top: 100px;
   display: flex;
   justify-content: center;
   margin-inline: auto;
@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  justify-content: center;
   /* background-color: pink; */
 }
 

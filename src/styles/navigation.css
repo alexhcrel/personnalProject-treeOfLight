@@ -1,8 +1,8 @@
 .navigation {
+  position: relative;
   box-sizing: border-box;
   width: 20%;
   padding-left: 100px;
-  /* background-color: brown; */
   padding-top: 115px;
 }
 
@@ -14,14 +14,22 @@
 }
 
 .navigation ul h2 {
+  font-family: roboto;
+  width: 100%;
+   background-color: black;
+   z-index: 1;
+   height: 45px;
+   margin-bottom: 20px;
+   text-align: left;
+}
+
+.navigation ul h2 a {
   font-size: 25px;
   height: 45px;
-  text-decoration: underline;
+  color: white;
   margin-bottom: 55px;
-  text-align: center;
-  background-color: black;
-  z-index: 1;
-  
+  text-align: left;
+ 
 }
 
 .navigation ul li {
@@ -29,8 +37,8 @@
   height: 80px;
   margin-bottom: 35px;
   max-width: 200px;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   background-color: black;
   z-index: 1;
 
@@ -40,7 +48,8 @@
   font-size: 20px;
   text-decoration: none;
   color: white;
-  text-align: center; 
+  text-align: left; 
+  z-index: 2;
 }
 
 a:hover {
@@ -48,9 +57,10 @@ a:hover {
 }
 
 .trait {
-  height: 330px;
+  height: 100%;
+  right: 50%;
   width: 1px;
   background-color: white;
-  position: fixed;
+  position: absolute;
   z-index: 0;
 }
