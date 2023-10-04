@@ -6,46 +6,56 @@ import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 
 const Exposition = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const categoriesList = [...new Set(bdd.map((e) => e.category))];
 
-  const goToPrevious = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
+  const [currentIndexNext, setCurrentIndexNext] = useState(1);
+
+  const goToPreviousCategory = () => {
     const isFirstCategory = currentIndex === 0;
+    const isFirstCategoryPrev = currentIndexPrev === 0;
+    const isFirstCategoryNext = currentIndexNext === 0;
     const newIndex = isFirstCategory ? categoriesList.length - 1 : currentIndex - 1;
+    const newIndexPrev = isFirstCategoryPrev ? categoriesList.length - 1 : currentIndexPrev - 1;
+    const newIndexNext = isFirstCategoryNext ? categoriesList.length - 1 : currentIndexNext - 1;
     setCurrentIndex(newIndex);
+    setCurrentIndexPrev(newIndexPrev);
+    setCurrentIndexNext(newIndexNext);
   };
 
-  const goToNext = () => {
+  const goToNextCategory = () => {
     const isLastCategory = currentIndex === categoriesList.length - 1;
+    const isLastCategoryPrev = currentIndexPrev === categoriesList.length - 1;
+    const isLastCategoryNext = currentIndexNext === categoriesList.length - 1;
     const newIndex = isLastCategory ? 0 : currentIndex + 1;
+    const newIndexPrev = isLastCategoryPrev ? 0 : currentIndexPrev + 1;
+    const newIndexNext = isLastCategoryNext ? 0 : currentIndexNext + 1;
     setCurrentIndex(newIndex);
+    setCurrentIndexPrev(newIndexPrev);
+    setCurrentIndexNext(newIndexNext);
   };
 
-const slides =[]
-  function listeDesUrl(x) {
-    x.forEach((e) => {
-      if (e.category == categoriesList[currentIndex]) {
-        slides.push(e.url);
-      }
+  const slides =[]
+    function listeDesUrl(x) {
+      x.forEach((e) => {
+        if (e.category == categoriesList[currentIndex]) {
+          slides.push(e.url);
+        }
     });
   }
 
+  const slidesPrev = bdd.filter((e) => e.category === categoriesList[currentIndexPrev])[0].url
+  const slidesNext = bdd.filter((e) => e.category === categoriesList[currentIndexNext])[0].url
+
   listeDesUrl(bdd)
-  
-// const slides = slide.map((e)=> e.url);
+   const prevStyles = {
+    backgroundImage: `url(${slidesPrev})`,
+  };
 
-  // const slides = [
-  //   {url: "http://localhost:3000/images/ameublements/am_img1.jpg",  title: "boite", alt:"tronc"},
-  //   {url: "http://localhost:3000/images/ameublements/am_img2.jpg",  title: "boite", alt:"tronc"},
-  //   {url: "http://localhost:3000/images/ameublements/am_img3.jpg",  title: "banc", alt:"tronc"},
-  //   {url: "http://localhost:3000/images/ameublements/am_img4.jpg",  title: "curb", alt:"tronc"}
-  // ];
-
-  // const containerStyles = {
-  //   width: '450px',
-  //   height: "450px",
-  //   margin: "50px auto",
-  // };
+  const nextStyles = {
+    backgroundImage: `url(${slidesNext})`,
+  };
 
   return (
     <section className="exposition">
@@ -55,8 +65,8 @@ const slides =[]
           <ImageSlider slides={slides}/>
         </div>
         <div className="link">
-          <div className="linkSize linkPrev" onClick={goToPrevious}>prev</div>
-          <div className="linkSize linkNext" onClick={goToNext}>next</div>
+          <div className="linkSize linkPrev" style={prevStyles} onClick={goToPreviousCategory}>prev</div>
+          <div className="linkSize linkNext" style={nextStyles} onClick={goToNextCategory}>next</div>
         </div>
       </div>
       <div className="commandes">

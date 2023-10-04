@@ -5,11 +5,16 @@ import "../styles/exposition.css";
 
 
 const ImageSlider = ({slides}) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const slideStyles = {
-      backgroundImage: `url(${slides[currentIndex]})`,
-    }
+  const slideStyles = {
+    backgroundImage: `url(${slides[currentIndex]})`,
+  };
+  
+  // Si currentIndex dépasse la longueur du tableau slides, réinitialisez-le à 0
+  if (currentIndex >= slides.length) {
+    setCurrentIndex(0);
+  }
 
     const goToPrevious = () => {
       const isFirstSlide = currentIndex === 0;
