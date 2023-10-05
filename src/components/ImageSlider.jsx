@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../styles/exposition.css";
 
 
-
 const ImageSlider = ({slides}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
