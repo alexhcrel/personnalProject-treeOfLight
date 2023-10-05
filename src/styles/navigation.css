@@ -29,7 +29,6 @@
   color: white;
   margin-bottom: 55px;
   text-align: left;
- 
 }
 
 .navigation ul li {
@@ -50,17 +49,18 @@
   color: white;
   text-align: left; 
   z-index: 2;
+ 
 }
 
 a:hover {
   font-weight: 600;
 }
 
-.trait {
+/* .trait {
   height: 100%;
   right: 50%;
   width: 1px;
   background-color: white;
   position: absolute;
   z-index: 0;
-}
+} */
