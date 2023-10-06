@@ -45,10 +45,10 @@ console.log(categoryWithIndex);
       <div className="trait"></div>
     <ul onMouseLeave={() => initializeLifeStyle()}>
       <h2><a href="/#">Main page</a></h2>
-      <h2 onMouseEnter={() => changeLifeStyle()}><a href="/produits" >Nos produits</a></h2>
+      <h2 onMouseEnter={() => changeLifeStyle()}><a href="/produits/0" >Nos produits</a></h2>
       <div style={lifeStyle}>
       {categoryWithIndex.map((e) => (
-          <li><a href={`/produits/${e.index}`}>{e.category}</a></li>
+          <li key={e.index}><a href={`/produits/${e.index}`}>{e.category}</a></li>
         ))}
       </div>
     </ul>

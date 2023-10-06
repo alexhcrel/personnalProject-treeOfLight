@@ -12,6 +12,26 @@ const Exposition = ({objet}) => {
   const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
   const [currentIndexNext, setCurrentIndexNext] = useState(1);
 
+  let categoryPourImageDePrev = null;
+  const changeCategoryPrev = (objet, categoriesList) => {
+    if (objet == 0) {
+      categoryPourImageDePrev = categoriesList.length - 1;
+    } else {
+      categoryPourImageDePrev = parseInt(objet) - 1;
+    }
+  };
+  changeCategoryPrev(objet, categoriesList);
+
+    let categoryPourImageDeNext = null;
+  const changeCategoryNext = (objet, categoriesList) => {
+    if (objet == categoriesList.length - 1) {
+      categoryPourImageDeNext = 0;
+    } else {
+      categoryPourImageDeNext = parseInt(objet) + 1;
+    }
+  };
+  changeCategoryNext(objet, categoriesList);
+
   const goToPreviousCategory = () => {
     const isFirstCategory = currentIndex === 0;
     const isFirstCategoryPrev = currentIndexPrev === 0;
@@ -45,8 +65,8 @@ const Exposition = ({objet}) => {
     });
   }
 
-  const slidesPrev = bdd.filter((e) => e.category === categoriesList[currentIndexPrev])[0].url
-  const slidesNext = bdd.filter((e) => e.category === categoriesList[currentIndexNext])[0].url
+  const slidesPrev = bdd.filter((e) => e.category === categoriesList[categoryPourImageDePrev])[0].url
+  const slidesNext = bdd.filter((e) => e.category === categoriesList[categoryPourImageDeNext])[0].url
 
   listeDesUrl(bdd)
    const prevStyles = {
