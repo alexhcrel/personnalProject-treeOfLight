@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import "../styles/navigation.css";
+import bdd from "../data/bdd.json";
 
 
 
 const Navigation = () => {
+  const categoriesList = [...new Set(bdd.map((e) => e.category))];
+  // const objet = categoriesList.find((item) => item.category === numeroDeCategory)
+  console.log(categoriesList)
+  const categoryWithIndex = categoriesList.map((category, index) => ({
+    index,
+    category
+}));
+
+console.log(categoryWithIndex);
+
 
   const hiddenBox = {
     opacity: '0',
@@ -14,7 +25,6 @@ const Navigation = () => {
     opacity: '1',
     transition: 'opacity 1000ms ease-in-out'
   };
-
 
   const [lifeStyle, setLifeStyle] = 
     useState(hiddenBox);
@@ -37,9 +47,9 @@ const Navigation = () => {
       <h2><a href="/#">Main page</a></h2>
       <h2 onMouseEnter={() => changeLifeStyle()}><a href="/produits" >Nos produits</a></h2>
       <div style={lifeStyle}>
-        <li><a  href="/produits">Nos lampes et appliques murales</a></li>
-        <li><a href="/produits">Notre collection de bois flottés</a></li>
-        <li><a  href="/produits">Petits ameublements</a></li>
+      {categoryWithIndex.map((e) => (
+          <li><a href={`/produits/${e.index}`}>{e.category}</a></li>
+        ))}
       </div>
     </ul>
   

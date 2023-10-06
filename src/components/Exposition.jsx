@@ -5,10 +5,10 @@ import bdd from "../data/bdd.json";
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 
-const Exposition = () => {
+const Exposition = ({objet}) => {
   const categoriesList = [...new Set(bdd.map((e) => e.category))];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(objet);
   const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
   const [currentIndexNext, setCurrentIndexNext] = useState(1);
 
