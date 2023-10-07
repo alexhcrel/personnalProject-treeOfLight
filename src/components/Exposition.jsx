@@ -4,13 +4,39 @@ import "../styles/exposition.css";
 import bdd from "../data/bdd.json";
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
+import { Link } from "react-router-dom";
 
 const Exposition = ({objet}) => {
   const categoriesList = [...new Set(bdd.map((e) => e.category))];
 
+  let objetPrev = null;
+  const calculCatToPlayPrev = (objet) => {
+    if (parseInt(objet) === 0) {
+      objetPrev = categoriesList.length - 1
+    } else {
+      objetPrev = parseInt(objet) - 1;
+    }
+  };
+  calculCatToPlayPrev(objet)
+console.log(objetPrev)
+
+
+  let objetNext = null;
+  console.log(objetNext)
+  const calculCatToPlayNext = (objet) => {
+    if (parseInt(objet) === categoriesList.length - 1) {
+      objetNext = 0
+    } else {
+      objetNext = parseInt(objet) +1
+    }
+  };
+  calculCatToPlayNext(objet)
+  console.log(objetNext)
+
+
   const [currentIndex, setCurrentIndex] = useState(objet);
-  const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
-  const [currentIndexNext, setCurrentIndexNext] = useState(1);
+  // const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
+  // const [currentIndexNext, setCurrentIndexNext] = useState(1);
 
   let categoryPourImageDePrev = null;
   const changeCategoryPrev = (objet, categoriesList) => {
@@ -85,8 +111,8 @@ const Exposition = ({objet}) => {
           <ImageSlider slides={slides}/>
         </div>
         <div className="link">
-          <div className="linkSize linkPrev" style={prevStyles} onClick={goToPreviousCategory}>prev</div>
-          <div className="linkSize linkNext" style={nextStyles} onClick={goToNextCategory}>next</div>
+          <Link className="linkSize linkPrev" style={prevStyles} to={`/produits/${objetPrev}`}>prev</Link>
+          <Link className="linkSize linkNext" style={nextStyles} to={`/produits/${objetNext}`}>next</Link>
         </div>
       </div>
       <div className="commandes">
