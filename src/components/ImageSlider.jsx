@@ -5,10 +5,10 @@ import "../styles/exposition.css";
 
 const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [totalAPayer, setTotalAPayer] = useState(0);
+  const [panier, setPanier] = useState([]);
+;
 
-  const panier = [];
-
+const listeDansCategoryActive = bdd.filter((e)=>e.category === categoriesList[objet]);
 
   const slideStyles = {
     backgroundImage: `url(${slides[currentIndex]})`,
@@ -34,12 +34,15 @@ const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
   }
   listeDesPrix(bdd)
 
-  console.log(bdd)
   const ajouterAuPanier = () => {
-     const newPanier = panier.push(bdd[objet].price);
-     console.log(newPanier)
+  const newPanier = listeDansCategoryActive[currentIndex]
+  panier.push(newPanier)
+  console.log(newPanier)
+  localStorage.setItem("clé", JSON.stringify(panier));
+  console.log(localStorage.getItem("clé"))
   }
-
+  
+ 
 
   // Si currentIndex dépasse la longueur du tableau slides, réinitialisez-le à 0
   if (currentIndex >= slides.length) {
@@ -61,9 +64,9 @@ const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
       setCurrentIndex(slideIndex);
     } ;
 
-    useEffect(() => {
-      alert(`J'aurai ${totalAPayer} à payer 💸`)}, [totalAPayer]
-  )
+  //   useEffect(() => {
+  //     alert(`J'aurai ${totalAPayer} à payer 💸`)}, [totalAPayer]
+  // )
   
     return <div className="sliderStyle">
         
