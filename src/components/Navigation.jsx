@@ -7,14 +7,10 @@ import bdd from "../data/bdd.json";
 const Navigation = () => {
   const categoriesList = [...new Set(bdd.map((e) => e.category))];
   // const objet = categoriesList.find((item) => item.category === numeroDeCategory)
-  console.log(categoriesList)
   const categoryWithIndex = categoriesList.map((category, index) => ({
     index,
     category
 }));
-
-console.log(categoryWithIndex);
-
 
   const hiddenBox = {
     opacity: '0',

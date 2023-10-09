@@ -1,59 +1,79 @@
 [
 	{
-		"id": "002",
+		"id": "001",
 		"category": "lampe",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/lampes/lampe_img2.png"
 	},
 	{
-		"id": "003",
+		"id": "002",
 		"category": "lampe",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/lampes/lampe_img3.png"
 	},{
-		"id": "001",
+		"id": "003",
 		"category": "ameublement",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/ameublements/am_img1.jpg"
 	},
 	{
-		"id": "002",
+		"id": "004",
 		"category": "ameublement",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/ameublements/am_img2.jpg"
 	},
 	{
-		"id": "003",
+		"id": "005",
 		"category": "ameublement",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/ameublements/am_img3.jpg"
 	},
 	{
-		"id": "004",
+		"id": "006",
 		"category": "ameublement",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/ameublements/am_img4.jpg"
 	},
 	{
-		"id": "004",
-		"category": "boisflotte",
+		"id": "007",
+		"category": "bois flotté",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"
 	},{
-		"id": "004",
-		"category": "boisflotte",
+		"id": "008",
+		"category": "bois flotté",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img3.jpg"
 	},{
-		"id": "004",
-		"category": "boisflotte",
+		"id": "009",
+		"category": "bois flotté",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img2.jpg"
 	},
 	{
-		"id": "004",
-		"category": "boisflotte",
+		"id": "010",
+		"category": "bois flotté",
 		"title": "Banc",
+		"price": 225,
+		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img1.jpg"
 	}
 ]

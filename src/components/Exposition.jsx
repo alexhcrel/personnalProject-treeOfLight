@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "../styles/exposition.css";
 import bdd from "../data/bdd.json";
 import Navigation from "./Navigation";
@@ -18,11 +17,8 @@ const Exposition = ({objet}) => {
     }
   };
   calculCatToPlayPrev(objet)
-console.log(objetPrev)
-
 
   let objetNext = null;
-  console.log(objetNext)
   const calculCatToPlayNext = (objet) => {
     if (parseInt(objet) === categoriesList.length - 1) {
       objetNext = 0
@@ -31,10 +27,8 @@ console.log(objetPrev)
     }
   };
   calculCatToPlayNext(objet)
-  console.log(objetNext)
-
-
-  const [currentIndex, setCurrentIndex] = useState(objet);
+  
+  const currentIndex = objet;
   // const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
   // const [currentIndexNext, setCurrentIndexNext] = useState(1);
 
@@ -58,29 +52,29 @@ console.log(objetPrev)
   };
   changeCategoryNext(objet, categoriesList);
 
-  const goToPreviousCategory = () => {
-    const isFirstCategory = currentIndex === 0;
-    const isFirstCategoryPrev = currentIndexPrev === 0;
-    const isFirstCategoryNext = currentIndexNext === 0;
-    const newIndex = isFirstCategory ? categoriesList.length - 1 : currentIndex - 1;
-    const newIndexPrev = isFirstCategoryPrev ? categoriesList.length - 1 : currentIndexPrev - 1;
-    const newIndexNext = isFirstCategoryNext ? categoriesList.length - 1 : currentIndexNext - 1;
-    setCurrentIndex(newIndex);
-    setCurrentIndexPrev(newIndexPrev);
-    setCurrentIndexNext(newIndexNext);
-  };
+  // const goToPreviousCategory = () => {
+  //   const isFirstCategory = currentIndex === 0;
+  //   const isFirstCategoryPrev = currentIndexPrev === 0;
+  //   const isFirstCategoryNext = currentIndexNext === 0;
+  //   const newIndex = isFirstCategory ? categoriesList.length - 1 : currentIndex - 1;
+  //   const newIndexPrev = isFirstCategoryPrev ? categoriesList.length - 1 : currentIndexPrev - 1;
+  //   const newIndexNext = isFirstCategoryNext ? categoriesList.length - 1 : currentIndexNext - 1;
+  //   setCurrentIndex(newIndex);
+  //   setCurrentIndexPrev(newIndexPrev);
+  //   setCurrentIndexNext(newIndexNext);
+  // };
 
-  const goToNextCategory = () => {
-    const isLastCategory = currentIndex === categoriesList.length - 1;
-    const isLastCategoryPrev = currentIndexPrev === categoriesList.length - 1;
-    const isLastCategoryNext = currentIndexNext === categoriesList.length - 1;
-    const newIndex = isLastCategory ? 0 : currentIndex + 1;
-    const newIndexPrev = isLastCategoryPrev ? 0 : currentIndexPrev + 1;
-    const newIndexNext = isLastCategoryNext ? 0 : currentIndexNext + 1;
-    setCurrentIndex(newIndex);
-    setCurrentIndexPrev(newIndexPrev);
-    setCurrentIndexNext(newIndexNext);
-  };
+  // const goToNextCategory = () => {
+  //   const isLastCategory = currentIndex === categoriesList.length - 1;
+  //   const isLastCategoryPrev = currentIndexPrev === categoriesList.length - 1;
+  //   const isLastCategoryNext = currentIndexNext === categoriesList.length - 1;
+  //   const newIndex = isLastCategory ? 0 : currentIndex + 1;
+  //   const newIndexPrev = isLastCategoryPrev ? 0 : currentIndexPrev + 1;
+  //   const newIndexNext = isLastCategoryNext ? 0 : currentIndexNext + 1;
+  //   setCurrentIndex(newIndex);
+  //   setCurrentIndexPrev(newIndexPrev);
+  //   setCurrentIndexNext(newIndexNext);
+  // };
 
   const slides =[]
     function listeDesUrl(x) {
@@ -103,12 +97,15 @@ console.log(objetPrev)
     backgroundImage: `url(${slidesNext})`,
   };
 
+
+
+
   return (
     <section className="exposition">
       <Navigation />
       <div className="corpsProduits">
         <div className="containerStyles">
-          <ImageSlider slides={slides}/>
+          <ImageSlider slides={slides} bdd={bdd} objet={objet} categoriesList={categoriesList}/>
         </div>
         <div className="link">
           <Link className="linkSize linkPrev" style={prevStyles} to={`/produits/${objetPrev}`}>prev</Link>
