@@ -7,6 +7,9 @@ const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [totalAPayer, setTotalAPayer] = useState(0);
 
+  const panier = [];
+
+
   const slideStyles = {
     backgroundImage: `url(${slides[currentIndex]})`,
   };
@@ -31,10 +34,12 @@ const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
   }
   listeDesPrix(bdd)
 
-  const ajouterATotal = () => {
-    const newTotal = totalAPayer + prices[currentIndex];
-    setTotalAPayer(newTotal)
+  console.log(bdd)
+  const ajouterAuPanier = () => {
+     const newPanier = panier.push(bdd[objet].price);
+     console.log(newPanier)
   }
+
 
   // Si currentIndex dépasse la longueur du tableau slides, réinitialisez-le à 0
   if (currentIndex >= slides.length) {
@@ -71,7 +76,7 @@ const ImageSlider = ({slides, bdd, objet, categoriesList}) => {
         
         <div className = "etiquette">
           <h2>{titles[currentIndex]} {prices[currentIndex]} €</h2>
-          <button onClick={ajouterATotal}>Ajoutez au panier</button>
+          <button onClick={ajouterAuPanier}>Ajoutez au panier</button>
        </div>
         <div className = "dotContainerStyle">
           {slides.map((_, index) => (
