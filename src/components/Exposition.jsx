@@ -29,8 +29,6 @@ const Exposition = ({objet}) => {
   calculCatToPlayNext(objet)
   
   const currentIndex = objet;
-  // const [currentIndexPrev, setCurrentIndexPrev] = useState(categoriesList.length -1);
-  // const [currentIndexNext, setCurrentIndexNext] = useState(1);
 
   let categoryPourImageDePrev = null;
   const changeCategoryPrev = (objet, categoriesList) => {
@@ -51,30 +49,6 @@ const Exposition = ({objet}) => {
     }
   };
   changeCategoryNext(objet, categoriesList);
-
-  // const goToPreviousCategory = () => {
-  //   const isFirstCategory = currentIndex === 0;
-  //   const isFirstCategoryPrev = currentIndexPrev === 0;
-  //   const isFirstCategoryNext = currentIndexNext === 0;
-  //   const newIndex = isFirstCategory ? categoriesList.length - 1 : currentIndex - 1;
-  //   const newIndexPrev = isFirstCategoryPrev ? categoriesList.length - 1 : currentIndexPrev - 1;
-  //   const newIndexNext = isFirstCategoryNext ? categoriesList.length - 1 : currentIndexNext - 1;
-  //   setCurrentIndex(newIndex);
-  //   setCurrentIndexPrev(newIndexPrev);
-  //   setCurrentIndexNext(newIndexNext);
-  // };
-
-  // const goToNextCategory = () => {
-  //   const isLastCategory = currentIndex === categoriesList.length - 1;
-  //   const isLastCategoryPrev = currentIndexPrev === categoriesList.length - 1;
-  //   const isLastCategoryNext = currentIndexNext === categoriesList.length - 1;
-  //   const newIndex = isLastCategory ? 0 : currentIndex + 1;
-  //   const newIndexPrev = isLastCategoryPrev ? 0 : currentIndexPrev + 1;
-  //   const newIndexNext = isLastCategoryNext ? 0 : currentIndexNext + 1;
-  //   setCurrentIndex(newIndex);
-  //   setCurrentIndexPrev(newIndexPrev);
-  //   setCurrentIndexNext(newIndexNext);
-  // };
 
   const slides =[]
     function listeDesUrl(x) {
