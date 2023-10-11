@@ -2,14 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../styles/exposition.css";
 
-const ImageSlider = ({ slides, bdd, objet, categoriesList }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [panier, setPanier] = useState([]);
-  const [sommeTotale, setSommeTotale] = useState(0);
-
-  const listeDansCategoryActive = bdd.filter(
-    (e) => e.category === categoriesList[objet]
-  );
+const ImageSlider = ({ currentIndex, setCurrentIndex, slides, bdd, objet, categoriesList, ajouterAuPanier }) => {
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const [panier, setPanier] = useState([]);
+  // const [sommeTotale, setSommeTotale] = useState(0);
 
   const slideStyles = {
     backgroundImage: `url(${slides[currentIndex]})`,
@@ -35,9 +31,9 @@ const ImageSlider = ({ slides, bdd, objet, categoriesList }) => {
   }
   listeDesPrix(bdd);
 
-  const produitAAjouterAuPanier = bdd.filter(
-    (e) => e.category === categoriesList[objet]
-  )[currentIndex];
+  // const produitAAjouterAuPanier = bdd.filter(
+  //   (e) => e.category === categoriesList[objet]
+  // )[currentIndex];
 
   // Si currentIndex dépasse la longueur du tableau slides, réinitialisez-le à 0
   if (currentIndex >= slides.length) {
@@ -59,25 +55,7 @@ const ImageSlider = ({ slides, bdd, objet, categoriesList }) => {
     setCurrentIndex(slideIndex);
   };
 
-  const ajouterAuPanier = () => {
-    panier.push(produitAAjouterAuPanier);
-    const somme = panier.map((e) => e.price).reduce((n1, n2) => n1 + n2);
-    setSommeTotale(somme);
-    // Stockez le panier dans le localStorage
-    localStorage.setItem("panier", JSON.stringify(panier));
-    console.log(panier.length);
-  };
-  useEffect(() => {
-    // Récupérez le panier depuis le localStorage
-    const savedPanier = localStorage.getItem("panier");
-
-    // Si le panier existe dans le localStorage, mettez à jour l'état local
-    if (savedPanier) {
-      setPanier(JSON.parse(savedPanier));
-    }
-    // console.log(panier.length);
-  }, []);
-
+  
 
 
   return (
