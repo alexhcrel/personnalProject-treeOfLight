@@ -20,7 +20,6 @@ const Exposition = ({ objet }) => {
   )[currentIndex];
   const [panier, setPanier] = useState([]);
   const [sommeTotale, setSommeTotale] = useState(0);
-  console.log(panier)
 
   let objetPrev = null;
   const calculCatToPlayPrev = (objet) => {
@@ -66,9 +65,8 @@ const Exposition = ({ objet }) => {
 
   const slides = [];
   function listeDesUrl(x) {
-    x.map((e) => slides.push(e.url))
-  };
-
+    x.map((e) => slides.push(e.url));
+  }
 
   const slidesPrev = bdd.filter(
     (e) => e.category === categoriesList[categoryPourImageDePrev]
@@ -92,7 +90,7 @@ const Exposition = ({ objet }) => {
     setSommeTotale(somme);
     // Stockez le panier dans le localStorage
     localStorage.setItem("panier", JSON.stringify(panier));
-    console.log(panier.length);
+
   };
   useEffect(() => {
     // Récupérez le panier depuis le localStorage
@@ -102,13 +100,15 @@ const Exposition = ({ objet }) => {
     if (savedPanier) {
       setPanier(JSON.parse(savedPanier));
     }
-    // console.log(panier.length);
   }, []);
 
-  const cancelLastProduct = () => {
-    localStorage.clear
-  }
-
+  const viderLePanier = () => {
+    localStorage.clear();
+    setPanier([]);
+  };
+  const contenuDuLocalStorage = localStorage.getItem("panier");
+  console.log(JSON.parse(contenuDuLocalStorage));
+console.log(panier)
   return (
     <section className="exposition">
       <Navigation />
@@ -120,8 +120,8 @@ const Exposition = ({ objet }) => {
             objet={objet}
             categoriesList={categoriesList}
             ajouterAuPanier={ajouterAuPanier}
-            currentIndex = {currentIndex}
-            setCurrentIndex = {setCurrentIndex}
+            currentIndex={currentIndex}
+            setCurrentIndex={setCurrentIndex}
           />
         </div>
         <div className="link">
@@ -141,7 +141,7 @@ const Exposition = ({ objet }) => {
           </Link>
         </div>
       </div>
-      <Panier />
+      <Panier viderLePanier={viderLePanier} />
       <div className="commandes">
         <h2>test</h2>
       </div>

@@ -4,7 +4,7 @@
 
 // const Modale = (props) => {
 //     const text = props.textToInsert;
-//     console.log(text)
+
   
 //   return (
     
