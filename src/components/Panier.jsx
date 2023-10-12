@@ -1,34 +1,39 @@
 import React from "react";
+import "../styles/panier.css";
+
+
+const Panier = ({viderLePanier, panier, setPanier}) => {
+
+    const supprimerUnProduit = (produitId) => {
+        // Filtrer le panier pour exclure le produit avec l'ID spécifié
+        const nouveauPanier = panier.filter((e) => e.id !== produitId);
+        setPanier(nouveauPanier)
+
+        // Mettre à jour le panier en utilisant la fonction fournie
+        // viderLePanier(nouveauPanier);
+
+         // Mettre à jour le panier dans le localStorage
+        localStorage.setItem('panier', JSON.stringify(nouveauPanier));
 
 
 
 
-const Panier = ({viderLePanier}) => {
-
-// const cancelLastProduct = () => {
-// // Récupérer la liste des clés dans le localStorage
-// const keys = Object.keys(localStorage);
-
-// // Vérifier si des clés existent
-// if (keys.length > 0) {
-//   // Trouver la clé la plus récente en utilisant la dernière clé dans la liste des clés
-//   const lastKey = keys[keys.length - 1];
-
-//   // Supprimer la clé la plus récente
-//   localStorage.removeItem(lastKey);
-// } else {
-//   console.log("Le localStorage est vide, rien à supprimer.");
-// }
-
-// window.location.reload();
-// }
-
+    };
+    
+    
 
 return (
-<div>
-    
-    
+<div>    
     <h1>panier</h1>
+    <div className = "listeAchats">
+        {panier.map((e) =>
+            <div key={e.id} className="produitSurLaListe">
+                <div>{e.title}</div>
+                <div>{e.price} €</div>
+                <button onClick={() => supprimerUnProduit(e.id)}>Supprimer ce produit</button>
+            </div>
+        )}
+    </div>
 
     {/* <button onClick = {cancelLastProduct}>effacer le dernier produit</button> */}
     <button onClick = {viderLePanier}>Vider le panier</button>

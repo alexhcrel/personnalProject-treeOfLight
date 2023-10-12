@@ -2,7 +2,7 @@
 	{
 		"id": "001",
 		"category": "lampe",
-		"title": "Banc",
+		"title": "Lampe en bois flotté avec abat-jour",
 		"price": 225,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/lampes/lampe_img2.png"
@@ -10,7 +10,7 @@
 	{
 		"id": "002",
 		"category": "lampe",
-		"title": "Banc",
+		"title": "Lampe en bois flotté - ampoule design",
 		"price": 115,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/lampes/lampe_img3.png"

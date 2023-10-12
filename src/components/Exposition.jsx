@@ -17,9 +17,15 @@ const Exposition = ({ objet }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const produitAAjouterAuPanier = bdd.filter(
     (e) => e.category === categoriesList[objet]
-  )[currentIndex];
+    )[currentIndex];
   const [panier, setPanier] = useState([]);
-  const [sommeTotale, setSommeTotale] = useState(0);
+  // const [sommeTotale, setSommeTotale] = useState(0);
+
+
+//////////////////////////////////////////////////////////////////////
+  //Cette partie gère la navigation dans les différentes catégories
+//////////////////////////////////////////////////////////////////////
+
 
   let objetPrev = null;
   const calculCatToPlayPrev = (objet) => {
@@ -40,8 +46,6 @@ const Exposition = ({ objet }) => {
     }
   };
   calculCatToPlayNext(objet);
-
-  // const currentIndex = objet;
 
   let categoryPourImageDePrev = null;
   const changeCategoryPrev = (objet, categoriesList) => {
@@ -68,6 +72,10 @@ const Exposition = ({ objet }) => {
     x.map((e) => slides.push(e.url));
   }
 
+
+  //////////////////////////////////////////////////////////////////////
+  // sélection des images pour la navogation entre les catégories
+//////////////////////////////////////////////////////////////////////
   const slidesPrev = bdd.filter(
     (e) => e.category === categoriesList[categoryPourImageDePrev]
   )[0].url;
@@ -84,14 +92,20 @@ const Exposition = ({ objet }) => {
     backgroundImage: `url(${slidesNext})`,
   };
 
+//////////////////////////////////////////////////////////////////////
+  // Cette partie gère le panier
+//////////////////////////////////////////////////////////////////////
+
   const ajouterAuPanier = () => {
     panier.push(produitAAjouterAuPanier);
-    const somme = panier.map((e) => e.price).reduce((n1, n2) => n1 + n2);
-    setSommeTotale(somme);
+    // const somme = panier.map((e) => e.price).reduce((n1, n2) => n1 + n2);
+    // window.location.reload();
+    // setSommeTotale(somme);
     // Stockez le panier dans le localStorage
     localStorage.setItem("panier", JSON.stringify(panier));
-
+    window.location.reload();
   };
+
   useEffect(() => {
     // Récupérez le panier depuis le localStorage
     const savedPanier = localStorage.getItem("panier");
@@ -106,9 +120,20 @@ const Exposition = ({ objet }) => {
     localStorage.clear();
     setPanier([]);
   };
+
+
+
+
   const contenuDuLocalStorage = localStorage.getItem("panier");
   console.log(JSON.parse(contenuDuLocalStorage));
-console.log(panier)
+  console.log(panier)
+
+
+
+
+
+
+
   return (
     <section className="exposition">
       <Navigation />
@@ -141,10 +166,7 @@ console.log(panier)
           </Link>
         </div>
       </div>
-      <Panier viderLePanier={viderLePanier} />
-      <div className="commandes">
-        <h2>test</h2>
-      </div>
+      <Panier panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier} />
     </section>
   );
 };
