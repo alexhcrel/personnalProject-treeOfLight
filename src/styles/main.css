@@ -7,6 +7,14 @@
   width: 100%;
 }
 
+.navigation {
+  position: relative;
+  box-sizing: border-box;
+  width: 20%;
+  padding-left: 100px;
+  padding-top: 115px;
+}
+
 .corps {
   display: flex;
   width: 60%;

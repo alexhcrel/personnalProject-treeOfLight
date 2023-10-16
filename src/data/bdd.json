@@ -1,7 +1,7 @@
 [
 	{
 		"id": "001",
-		"category": "lampe",
+		"category": "Lampe",
 		"title": "Lampe en bois flotté avec abat-jour",
 		"price": 225,
 		"description": "Pied de vigne",
@@ -9,14 +9,14 @@
 	},
 	{
 		"id": "002",
-		"category": "lampe",
+		"category": "Lampe",
 		"title": "Lampe en bois flotté - ampoule design",
 		"price": 115,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/lampes/lampe_img3.png"
 	},{
 		"id": "003",
-		"category": "ameublement",
+		"category": "Ameublement",
 		"title": "Banc",
 		"price": 100,
 		"description": "Pied de vigne",
@@ -24,7 +24,7 @@
 	},
 	{
 		"id": "004",
-		"category": "ameublement",
+		"category": "Ameublement",
 		"title": "Banc",
 		"price": 265,
 		"description": "Pied de vigne",
@@ -32,7 +32,7 @@
 	},
 	{
 		"id": "005",
-		"category": "ameublement",
+		"category": "Ameublement",
 		"title": "Banc",
 		"price": 90,
 		"description": "Pied de vigne",
@@ -40,7 +40,7 @@
 	},
 	{
 		"id": "006",
-		"category": "ameublement",
+		"category": "Ameublement",
 		"title": "Banc",
 		"price": 89,
 		"description": "Pied de vigne",
@@ -48,21 +48,21 @@
 	},
 	{
 		"id": "007",
-		"category": "bois flotté",
+		"category": "Bois flotté",
 		"title": "Banc",
 		"price": 20,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"
 	},{
 		"id": "008",
-		"category": "bois flotté",
+		"category": "Bois flotté",
 		"title": "Banc",
 		"price": 465,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img3.jpg"
 	},{
 		"id": "009",
-		"category": "bois flotté",
+		"category": "Bois flotté",
 		"title": "Banc",
 		"price": 155,
 		"description": "Pied de vigne",
@@ -70,7 +70,7 @@
 	},
 	{
 		"id": "010",
-		"category": "bois flotté",
+		"category": "Bois flotté",
 		"title": "Banc",
 		"price": 600,
 		"description": "Pied de vigne",

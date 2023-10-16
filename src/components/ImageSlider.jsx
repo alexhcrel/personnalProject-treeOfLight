@@ -69,13 +69,6 @@ const ImageSlider = ({ currentIndex, setCurrentIndex, slides, bdd, objet, catego
           ›
         </div>
       </div>
-
-      <div className="etiquette">
-        <h2>
-          {titles[currentIndex]} {prices[currentIndex]} €
-        </h2>
-        <button onClick={ajouterAuPanier}>Ajoutez au panier</button>
-      </div>
       <div className="dotContainerStyle">
         {slides.map((_, index) => (
           <div key={index} onClick={() => goToSlide(index)}>
@@ -83,6 +76,12 @@ const ImageSlider = ({ currentIndex, setCurrentIndex, slides, bdd, objet, catego
           </div>
         ))}
       </div>
+      <div className="etiquette">
+        <h2>{titles[currentIndex]}  </h2>
+        <h3>{prices[currentIndex]} €</h3>
+        <button onClick={ajouterAuPanier}>Ajoutez au panier</button>
+      </div>
+
 
       {/* <img src="http://localhost:3000/images/icons/arrow_right.png" alt="Description de l'image" /> */}
     </div>
