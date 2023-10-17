@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 import Panier from "../components/Panier";
+import Modale from "../components/Modale";
+
 import { Link } from "react-router-dom";
 
 const Exposition = ({ objet }) => {
@@ -167,6 +169,7 @@ const Exposition = ({ objet }) => {
         </div>
       </div>
       <Panier panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier} />
+      <Modale />
     </section>
   );
 };

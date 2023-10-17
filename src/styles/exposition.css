@@ -40,8 +40,10 @@ flex-direction: column;
   width: 60%;
   height: 650px;
   border-radius: 10px;
-  background-position-x: center;
+  background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .leftArrowStyle {

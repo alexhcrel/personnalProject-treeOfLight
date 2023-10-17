@@ -1,18 +1,18 @@
-// import React from 'react';
-// import "../styles/modale.css";
-// import "../modales.js";
+import React from 'react';
+import "../styles/modale.css";
+import "../modales.js";
 
-// const Modale = (props) => {
-//     const text = props.textToInsert;
+const Modale = () => {
+    // const text = props.textToInsert;
 
   
-//   return (
+  return (
     
-// <div className="modale" style={{ display: "none" }}>
-// <p>{text}</p>
-// </div>
+<div className="modale" >
+<p>Hellos world</p>
+</div>
  
-//   );
-// };
+  );
+};
 
-// export default Modale;
+export default Modale;

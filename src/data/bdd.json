@@ -20,7 +20,7 @@
 		"title": "Banc",
 		"price": 100,
 		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/ameublements/am_img1.jpg"
+		"url": "http://localhost:3000/images/ameublements/am_img1.png"
 	},
 	{
 		"id": "004",
@@ -41,10 +41,10 @@
 	{
 		"id": "006",
 		"category": "Ameublement",
-		"title": "Banc",
+		"title": "Coffre à jouets",
 		"price": 89,
 		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/ameublements/am_img4.jpg"
+		"url": "http://localhost:3000/images/ameublements/am_img4.png"
 	},
 	{
 		"id": "007",

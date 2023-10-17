@@ -14,6 +14,7 @@ const Produits = () => {
     <div className="home">
       <Banner />
       <Exposition key={objet} objet={objet}/>
+      
     </div>
   );
 };
