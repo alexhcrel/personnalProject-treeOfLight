@@ -4,7 +4,9 @@ import bdd from "../data/bdd.json";
 import { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
-import Panier from "../components/Panier";
+// import Panier from "../components/Panier";
+import ResumeDuPanier from "../components/ResumeDuPanier";
+
 import Modale from "../components/Modale";
 
 import { Link } from "react-router-dom";
@@ -168,8 +170,8 @@ const Exposition = ({ objet }) => {
           </Link>
         </div>
       </div>
-      <Panier panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier} />
-      <Modale />
+      <ResumeDuPanier panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier} />
+      {/* <Modale panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier}/> */}
     </section>
   );
 };

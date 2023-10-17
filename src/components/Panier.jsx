@@ -9,6 +9,7 @@ const Panier = ({viderLePanier, panier, setPanier}) => {
         // Filtrer le panier pour exclure le produit avec l'ID spécifié
         const nouveauPanier = panier.filter((e) => e.id !== produitId);
         setPanier(nouveauPanier)
+        window.location.reload();
 
         // Mettre à jour le panier en utilisant la fonction fournie
         // viderLePanier(nouveauPanier);
@@ -33,6 +34,7 @@ return (
                 <div></div>
                 <button onClick={() => supprimerUnProduit(e.id)}>Supprimer ce produit</button>
             </div>
+            
         )}
     </div>
     
