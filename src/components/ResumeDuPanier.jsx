@@ -1,5 +1,5 @@
 import React,  { useState }from "react";
-import "../styles/panier.css";
+import "../styles/resumeDuPanier.css";
 import Modale from "../components/Modale";
 
 
