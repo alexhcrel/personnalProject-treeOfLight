@@ -42,6 +42,7 @@ const Navigation = () => {
     <ul onMouseLeave={() => initializeLifeStyle()}>
       <h2><a href="/#">Accueil</a></h2>
       <h2 onMouseEnter={() => changeLifeStyle()}><a href="/produits/0" >Nos créations</a></h2>
+      <h2>panier</h2>
       <div style={lifeStyle}>
       {categoryWithIndex.map((e) => (
           <li key={e.index}><a href={`/produits/${e.index}`}>{e.category}</a></li>
