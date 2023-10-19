@@ -51,9 +51,11 @@ h2:hover {
 }
 
 .trait {
+  position:absolute;
+  left: 125px;
   height: 100%;
   right: 50%;
-  width: 1px;
+  width: 0.5px;
   background-color: white;
   position: absolute;
   z-index: 0;

@@ -2,10 +2,7 @@ import React from "react";
 import "../styles/modale.css";
 import { closeModal } from '../modales';
 
-// import "../modales.js";
-// import Panier from "../components/Panier";
-
-const Modale = ({ viderLePanier, panier, setPanier, style }) => {
+const Modale = ({panier, setPanier, style }) => {
   let sommeTotaleAPayer = 0;
   let listeDesPrix = 0;
 
@@ -22,6 +19,11 @@ const Modale = ({ viderLePanier, panier, setPanier, style }) => {
     sommeTotaleAPayer = listeDesPrix.reduce((n1, n2) => n1 + n2);
   }
 
+  const viderLePanier = () => {
+    localStorage.clear();
+    setPanier([]);
+    window.location.reload()
+  };
   // const text = props.textToInsert;
 
   // const [styleDeLaModale, setStyleDeLaModale] = useState({ display: "flex" })

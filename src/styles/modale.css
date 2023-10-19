@@ -1,5 +1,5 @@
 .modale {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: fixed;
   z-index: 3;
@@ -49,10 +49,12 @@
 
 .modale .listeAchats .produitSurLaListe button {
   height: 28px;
-  padding: 5px;
   width: 145px;
   border-radius: 20px;
+  border: solid 1px grey;
   margin: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Addition du total à payer*/
@@ -75,17 +77,21 @@
 .modale .totalDeMesAchats .gestionDuPanier button {
   display: flex;
   margin: 0;
-  padding: 5px;
+  /* padding: 5px; */
   height: 28px;
   width: 145px;
   border-radius: 20px;
+  align-items: center;
   justify-content: center;
+  border: solid 1px grey;
 }
 
 /* Boutton pour fermer le panier*/
 .modale .fermeturePanier {
   margin: 0;
-  padding: 5px;
+  height: 28px;
+  padding-inline: 10px;
   width: fit-content;
   border-radius: 20px;
+  border: solid 1px grey;
 }

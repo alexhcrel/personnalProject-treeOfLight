@@ -5,9 +5,7 @@ import { openModal } from '../modales';
 
 
 
-
-
-const ResumeDuPanier = ({panier, viderLePanier, setPanier}) => {
+const ResumeDuPanier = ({panier}) => {
     let sommeTotaleAPayer = 0;
     let listeDesPrix = 0;
     // const [styleDeLaModale, setStyleDeLaModale] = useState({ display: "none"})
@@ -28,15 +26,15 @@ const ResumeDuPanier = ({panier, viderLePanier, setPanier}) => {
     }
 
 return (
-<div className="votrePanier">    
-    <h2>votre panier</h2>
+<div className="resumeDuPanier">    
+    <h3>Votre panier</h3>
     
     <div className="totalDeMesAchats">
-        <h2>TOTAL A PAYER : </h2>
+        <h3>Total à payer : </h3>
         <h2>{sommeTotaleAPayer} €</h2>
     </div>
     <button onClick={openModal}>Voir mon panier</button>
-    <Modale panier={panier} viderLePanier={viderLePanier} setPanier={setPanier} />
+    <Modale panier={panier} />
 
 </div>
 );

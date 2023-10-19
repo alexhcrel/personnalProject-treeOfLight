@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 // import Panier from "../components/Panier";
 import ResumeDuPanier from "../components/ResumeDuPanier";
-import Modale from "../components/Modale";
+// import Modale from "../components/Modale";
 
 import { Link } from "react-router-dom";
 
@@ -115,23 +115,9 @@ const Exposition = ({ objet }) => {
     }
   }, []);
 
-  const viderLePanier = () => {
-    localStorage.clear();
-    setPanier([]);
-  };
-
-
-
-
   const contenuDuLocalStorage = localStorage.getItem("panier");
   console.log(JSON.parse(contenuDuLocalStorage));
   console.log(panier)
-
-
-
-
-
-
 
   return (
     <section className="exposition">
@@ -165,7 +151,7 @@ const Exposition = ({ objet }) => {
           </Link>
         </div>
       </div>
-      <ResumeDuPanier panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier} />
+      <ResumeDuPanier panier = {panier} setPanier = {setPanier} />
       {/* <Modale panier = {panier} viderLePanier={viderLePanier} setPanier = {setPanier}/> */}
     </section>
   );

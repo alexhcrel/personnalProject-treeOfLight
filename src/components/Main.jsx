@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import "../styles/main.css";
 import Navigation from "../components/Navigation";
-import Modale from "../components/Modale";
 
 
 const Main = () => {
+
+
   return (
     <section className="main">
       <Navigation />

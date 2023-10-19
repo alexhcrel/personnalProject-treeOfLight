@@ -1,37 +1,20 @@
-.votrePanier {
+.resumeDuPanier {
+    margin-top: 75px;
+    padding:15px;
+    border-radius: 10px;
     display: flex;
+    background-color: rgb(34, 34, 34);
     flex-direction: column;
     align-items: center;
     height: fit-content;
-    border: solid 2px black;
-    /* background-color: blue; */
-
-}
-
-.resumeDuPanier h2 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-decoration: underline;
-    border: solid 2px black;
-}
-
-.produitSurLaListe {
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    border: solid 2px black;
 }
 
 .votrePanier .produitSurLaListe button {
    margin-top: 7px;
-   border: solid 2px black;
 }
 
 .votrePanier button{
-    margin-top: 55px;
-    border: solid 2px black;
+    margin-top: 55px
 }
 
 .totalDeMesAchats {
@@ -39,5 +22,4 @@
     flex-direction: column;
     margin-top: 20px;
     align-items: center;
-    border: solid 2px black;
 }
