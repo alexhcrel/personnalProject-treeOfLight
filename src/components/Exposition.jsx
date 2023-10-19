@@ -98,11 +98,16 @@ const Exposition = ({ objet }) => {
 //////////////////////////////////////////////////////////////////////
   // Cette partie gère le panier
 //////////////////////////////////////////////////////////////////////
-
+console.log(panier.map((e)=>e.id))
+console.log(produitAAjouterAuPanier.id)
   const ajouterAuPanier = () => {
+    if (panier.map((e)=>e.id).includes(produitAAjouterAuPanier.id)){
+      alert ("déjà mis")
+    }else{
     panier.push(produitAAjouterAuPanier);
     localStorage.setItem("panier", JSON.stringify(panier));
     window.location.reload();
+    };
   };
 
   useEffect(() => {
