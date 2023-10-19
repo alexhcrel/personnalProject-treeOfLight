@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/navigation.css";
 import bdd from "../data/bdd.json";
+import { openModal, openSousCategories, closeSousCategories } from '../modales';
 
 
 
@@ -12,44 +13,43 @@ const Navigation = () => {
     category
 }));
 
-  const hiddenBox = {
-    opacity: '0',
-    transition: 'opacity 450ms ease-in-out'
-  };
+  // const hiddenBox = {
+  //   opacity: '0',
+  //   transition: 'opacity 450ms ease-in-out'
+  // };
 
-  const visibleBox = {
-    opacity: '1',
-    transition: 'opacity 1000ms ease-in-out'
-  };
+  // const visibleBox = {
+  //   opacity: '1',
+  //   transition: 'opacity 1000ms ease-in-out'
+  // };
 
-  const [lifeStyle, setLifeStyle] = 
-    useState(hiddenBox);
+  // const [lifeStyle, setLifeStyle] = 
+  //   useState(hiddenBox);
 
-  const changeLifeStyle = () => {
-    setLifeStyle(visibleBox);
-  };
+  // const changeLifeStyle = () => {
+  //   setLifeStyle(visibleBox);
+  // };
 
-  const initializeLifeStyle = () => {
-    setLifeStyle({
-        opacity: '0',
-        transition: 'opacity 450ms ease-in-out'
-    });
-  };
+  // const initializeLifeStyle = () => {
+  //   setLifeStyle({
+  //       opacity: '0',
+  //       transition: 'opacity 450ms ease-in-out'
+  //   });
+  // };
 
   return (
     <nav className="navigation">
       <div className="trait"></div>
-    <ul onMouseLeave={() => initializeLifeStyle()}>
+    <ul onMouseLeave={() => closeSousCategories()}>
       <h2><a href="/#">Accueil</a></h2>
-      <h2 onMouseEnter={() => changeLifeStyle()}><a href="/produits/0" >Nos créations</a></h2>
-      <h2>panier</h2>
-      <div style={lifeStyle}>
+      <h2 onMouseEnter={() => openSousCategories()}><a href="/produits/0" >Nos créations</a></h2>
+      <div className='sousCategories' style={{display:'none'}}>
       {categoryWithIndex.map((e) => (
-          <li key={e.index}><a href={`/produits/${e.index}`}>{e.category}</a></li>
+          <li className="category" key={e.index}><a href={`/produits/${e.index}`}>{e.category}</a></li>
         ))}
       </div>
+      <h2 onClick={openModal}>Panier</h2>
     </ul>
-  
   </nav>
   );
 };

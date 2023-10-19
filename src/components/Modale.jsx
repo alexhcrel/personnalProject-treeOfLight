@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/modale.css";
-import { useState } from "react";
+import { closeModal } from '../modales';
 
 // import "../modales.js";
 // import Panier from "../components/Panier";
 
-const Modale = ({ viderLePanier, panier, setPanier, style, closeModale }) => {
+const Modale = ({ viderLePanier, panier, setPanier, style }) => {
   let sommeTotaleAPayer = 0;
   let listeDesPrix = 0;
 
@@ -50,7 +50,7 @@ const Modale = ({ viderLePanier, panier, setPanier, style, closeModale }) => {
         </div>
       </div>
 
-      <button onClick={closeModale} className="fermeturePanier"> Fermer le panier</button>
+      <button onClick={closeModal} className="fermeturePanier"> Fermer le panier</button>
     </div>
   );
 };

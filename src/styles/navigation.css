@@ -1,59 +1,60 @@
-
 .navigation ul {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 .navigation ul h2 {
   font-family: roboto;
   width: 100%;
-   background-color: black;
-   z-index: 1;
-   height: 45px;
-   margin-bottom: 20px;
-   text-align: left;
+  background-color: black;
+  z-index: 1;
+  margin-top: 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 25px;
 }
 
 .navigation ul h2 a {
-  font-size: 25px;
-  height: 45px;
+  /* height: 45px; */
   color: white;
-  margin-bottom: 55px;
+  /* margin-bottom: 5px; */
   text-align: left;
+  text-decoration: none;
+}
+
+.navigation ul .sousCategories {
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation ul li {
   display: flex;
-  height: 80px;
-  margin-bottom: 35px;
+  margin-bottom: 5px;
   max-width: 200px;
   justify-content: left;
   margin-left: 20px;
   background-color: black;
   z-index: 1;
-
 }
 
 .navigation ul li a {
   font-size: 20px;
   text-decoration: none;
   color: white;
-  text-align: left; 
+  text-align: left;
   z-index: 2;
- 
 }
 
-a:hover {
+h2:hover {
   font-weight: 600;
 }
 
-/* .trait {
+.trait {
   height: 100%;
   right: 50%;
   width: 1px;
   background-color: white;
   position: absolute;
   z-index: 0;
-} */
+}

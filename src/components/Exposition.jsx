@@ -6,7 +6,6 @@ import Navigation from "./Navigation";
 import ImageSlider from "../components/ImageSlider";
 // import Panier from "../components/Panier";
 import ResumeDuPanier from "../components/ResumeDuPanier";
-
 import Modale from "../components/Modale";
 
 import { Link } from "react-router-dom";
@@ -102,10 +101,6 @@ const Exposition = ({ objet }) => {
 
   const ajouterAuPanier = () => {
     panier.push(produitAAjouterAuPanier);
-    // const somme = panier.map((e) => e.price).reduce((n1, n2) => n1 + n2);
-    // window.location.reload();
-    // setSommeTotale(somme);
-    // Stockez le panier dans le localStorage
     localStorage.setItem("panier", JSON.stringify(panier));
     window.location.reload();
   };
