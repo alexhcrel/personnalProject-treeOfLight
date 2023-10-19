@@ -1,3 +1,6 @@
+
+
+
 .navigation ul {
   position: relative;
   display: flex;
@@ -51,7 +54,7 @@ h2:hover {
 }
 
 .trait {
-  position:absolute;
+  position: absolute;
   left: 125px;
   height: 100%;
   right: 50%;
