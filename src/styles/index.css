@@ -152,12 +152,6 @@ body {
   width: 100%;
 }
 
-.home {
-  display: flex;
-  overflow: hidden;
-  color: white;
-}
-
 .alignement {
   display: flex;
 }

@@ -1,0 +1,31 @@
+.home {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+  }
+
+  .banner {
+    height: 110px;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.main {
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 35px;
+    width: 95%;
+  }
+
+  .footer {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    background-color: pink;
+    display: block;
+    height: 120px;
+}
