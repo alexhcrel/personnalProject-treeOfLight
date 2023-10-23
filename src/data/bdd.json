@@ -23,22 +23,6 @@
 		"url": "http://localhost:3000/images/ameublements/am_img1.png"
 	},
 	{
-		"id": "004",
-		"category": "Ameublement",
-		"title": "Banc",
-		"price": 265,
-		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/ameublements/am_img2.jpg"
-	},
-	{
-		"id": "005",
-		"category": "Ameublement",
-		"title": "Banc",
-		"price": 90,
-		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/ameublements/am_img3.jpg"
-	},
-	{
 		"id": "006",
 		"category": "Ameublement",
 		"title": "Coffre à jouets",
@@ -49,7 +33,7 @@
 	{
 		"id": "007",
 		"category": "Bois flotté",
-		"title": "Banc",
+		"title": "Bancg",
 		"price": 20,
 		"description": "Pied de vigne",
 		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"

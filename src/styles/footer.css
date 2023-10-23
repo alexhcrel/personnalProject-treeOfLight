@@ -1,44 +1,44 @@
 .organisationFooter {
-display: flex;
-width: 60%;
-flex-direction: column;
-/* background-color: aqua; */
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  /* background-color: aqua; */
 }
 
-.infoFooter{
-    display: flex;
-    width: 100%;
-    height: 155px;
-    justify-content: space-between;
+.infoFooter {
+  display: flex;
+  width: 100%;
+  height: 155px;
+  justify-content: space-between;
 }
 
 .infoFooter ul {
-    font-size: 20px;
-    width: 25%;
+  font-size: 20px;
+  width: 25%;
 }
 
-.infoFooter ul h3{
-    font-size: 20px;
-    margin-bottom: 12px;
+.infoFooter ul h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
-.infoFooter ul li{
-    font-size: 16px;
+.infoFooter ul li {
+  font-size: 16px;
 }
 
 .pub {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
 }
-    
-    p, a {
-      font-size: 14px;
-    }
-    
+
+.pub p,
+.pub a {
+  font-size: 14px;
+}
