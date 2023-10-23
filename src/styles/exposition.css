@@ -1,13 +1,4 @@
-.exposition {
-  position: absolute;
-  top: 100px;
-  display: flex;
-  /* justify-content: space-between; */
-  justify-content: space-between;
-  margin-inline: 35px;
-  width: 95%; 
-  user-select: none;
-}
+
 
 .navigation {
   position: relative;
