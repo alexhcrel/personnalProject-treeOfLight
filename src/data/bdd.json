@@ -31,33 +31,11 @@
 		"url": "http://localhost:3000/images/ameublements/am_img4.png"
 	},
 	{
-		"id": "007",
-		"category": "Bois flotté",
-		"title": "Bancg",
-		"price": 20,
-		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/bois_flotte/bf_img4.jpg"
-	},{
-		"id": "008",
-		"category": "Bois flotté",
-		"title": "Banc",
-		"price": 465,
-		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/bois_flotte/bf_img3.jpg"
-	},{
-		"id": "009",
-		"category": "Bois flotté",
-		"title": "Banc",
-		"price": 155,
-		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/bois_flotte/bf_img2.jpg"
-	},
-	{
 		"id": "010",
 		"category": "Bois flotté",
 		"title": "Banc",
 		"price": 600,
 		"description": "Pied de vigne",
-		"url": "http://localhost:3000/images/bois_flotte/bf_img1.jpg"
+		"url": "http://localhost:3000/images/bois_flotte/bf_img1.png"
 	}
 ]

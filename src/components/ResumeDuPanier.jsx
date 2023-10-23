@@ -26,6 +26,7 @@ const ResumeDuPanier = ({panier}) => {
     }
 
 return (
+    <div className = "commandes">
 <div className="resumeDuPanier">    
     <h3>Votre panier</h3>
     
@@ -36,6 +37,7 @@ return (
     <button onClick={openModal}>Voir mon panier</button>
     <Modale panier={panier} />
 
+</div>
 </div>
 );
 };

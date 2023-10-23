@@ -1,5 +1,7 @@
 .resumeDuPanier {
-    margin-top: 85px;
+    position: fixed;
+    top: 135px;
+    right: 25px;
     padding:15px;
     border-radius: 10px;
     display: flex;

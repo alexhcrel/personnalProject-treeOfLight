@@ -36,7 +36,7 @@ flex-direction: column;
 }
 
 .slideStyle {
-  width: 60%;
+  width: 100%;
   height: 650px;
   border-radius: 10px;
   background-position: center;
