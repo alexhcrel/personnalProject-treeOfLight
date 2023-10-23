@@ -22,9 +22,8 @@
 
   .footer {
     display: flex;
-    position: relative;
+    background-color: black;
+    z-index: 2;
     bottom: 0;
-    background-color: pink;
-    display: block;
     height: 120px;
 }
